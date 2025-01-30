@@ -37,7 +37,6 @@ public class PigLatin {
         return d;
       }
     }
-        return -1;
     }
 
     public String pigLatin(String sWord) {
