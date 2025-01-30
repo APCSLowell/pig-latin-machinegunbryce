@@ -28,21 +28,40 @@ public class PigLatin {
 	    }
     }
     public int findFirstVowel(String sWord) {
-        //precondition: sWord is a valid String of length greater than 0.
-        //postcondition: returns the position of the first vowel in sWord.  If there are no vowels, returns -1
-	    // your code goes here
+ char [] v = {'a', 'e','i','o','u'};
+  int d = -1;
+  for(int i = 0; i < word.length(); i++){
+    for(int j = 0; j < 5; j++){
+      if(word.charAt(i) == vowels[j]){
+        d = i;
+        return d;
+      }
+    }
         return -1;
     }
 
     public String pigLatin(String sWord) {
-        //precondition: sWord is a valid String of length greater than 0
-        //postcondition: returns the pig latin equivalent of sWord
-        // more code should go here
 	    if(findFirstVowel(sWord) == -1) {
 		    return sWord + "ay";
 	    }
-	    else {
-		return "ERROR!";
+	    else if(findFirstVowel(sWord)==0){
+		String k = sWord;
+		    k = k +"way";
+		    return k;
 	    }
+	    else if(sWord.substring(0,2).equals("qu")){
+		    String a = sWord;
+		    a = a.substring(2) + "quay";
+		    return a;
+	    }
+	    else if(findFirstVowel(sWord) !=){
+		    String s = sWord;
+		    s = sWord.substring(findFirstVowel(sWord)) + sWord.substring(0,findFirstVowel(sWord)) + "ay";
+		    return a;
+	    }
+	    else {
+		    return "Error";
+	    }}
+	    
     }
-}//end PigLatin class
+
